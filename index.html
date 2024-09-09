@@ -9,6 +9,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+        .slideshow-container {
+            position: relative;
+            width: 50%;
+            float: left;
+           padding-top: 3%; /* This creates a square aspect ratio */
+        }
+
+        .mySlides {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover; /* Ensure the image covers the container without distortion */
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 36px;
+            color: black;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
 	</head>
 	<body class="is-preload">
 
@@ -70,22 +112,55 @@
    					     <li style="display: inline; margin-right: 20px;">Gravitational Wave</li>
    						<li style="display: inline; margin-right: 20px;">Astrophysics</li>
 					</ul>
-						<section >
-							<a href="#" class="image" ><img src="images/nseosmr.png" alt="" style="width: 90%; height: auto;" data-position="55% 35% "/></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Neutron Star Equation of State (EOS) Modelling </h2>
-									<p>Determining the NS EoS with nucleons and/or exotic matter, analytically (involves nuclear physics, particle physics, hypernuclear physics), and numerically.</p>
-									<p>Imposing constraints from multidisciplinary Physics on nuclear and hypernuclear NS EoSs.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
+						<section>
+						<!-- Slideshow 1 -->
+						<div id="slideshow1" class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides">
+                <img src="images/nseosmr.png" alt="Neutron Star EOS Modelling 1" data-position="top center" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="images/hyp_frac.png" alt="Neutron Star EOS Modelling 2" data-position="top center" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="images/eosmr_v2.png" alt="Neutron Star EOS Modelling 3" data-position="top center" style="width:100%">
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+        </div>
+
+        <div class="content">
+            <div class="inner">
+                <h2>Neutron Star Equation of State (EOS) Modelling</h2>
+                <p>Determining the NS EoS with nucleons and/or exotic matter, analytically (involves nuclear physics, particle physics, hypernuclear physics), and numerically.</p>
+                <p>Imposing constraints from multidisciplinary Physics on nuclear and hypernuclear NS EoSs.</p>
+                <ul class="actions">
+                    <li><a href="generic.html" class="button">Learn more</a></li>
+                </ul>
+            </div>
+           </div>
+            </section>
 						<div style="height: 10px;"></div>
 						<section>
-							<a href="#" class="image"><img src="images/astero.png" alt="" style="width: 100%; height: auto;" data-position="55% 35%" /></a>
+						<!-- Slideshow 2 -->
+						<div id="slideshow2" class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides">
+                <img src="images/astero.png" alt="Neutron Star EOS Modelling 1" data-position="top center" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="images/ltilde.png" alt="Neutron Star EOS Modelling 2" data-position="top center" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="images/tidal.png" alt="Neutron Star EOS Modelling 3" data-position="top center" style="width:100%">
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
+        </div>
 							<div class="content">
 								<div class="inner">
 									<h2>Neutron Star Gravitational Wave Asteroseismology</h2>
@@ -100,6 +175,47 @@
 						</section>
 					</section>
 
+				
+<!-- JavaScript placed at the end of the body -->
+    <script>
+    function showSlides(slideshowId) {
+        let slideIndex = 0;
+        function updateSlides() {
+            let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+            slides.forEach((slide) => {
+                slide.style.display = "none";
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(updateSlides, 2000); // Change slide every 2 seconds
+        }
+        updateSlides(); // Initialize the slideshow
+    }
+
+    function plusSlides(n, slideshowId) {
+        let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+        let slideIndex = Array.from(slides).findIndex(slide => slide.style.display === "block");
+        if (slideIndex === -1) slideIndex = 0;
+        slideIndex += n;
+        if (slideIndex >= slides.length) { slideIndex = 0 }
+        if (slideIndex < 0) { slideIndex = slides.length - 1 }
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+        slides[slideIndex].style.display = "block";
+    }
+
+    // Initialize slideshows
+    document.addEventListener('DOMContentLoaded', () => {
+        showSlides('slideshow1');
+        showSlides('slideshow2');
+    });
+    </script>
+			
+				
+				
+				
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
