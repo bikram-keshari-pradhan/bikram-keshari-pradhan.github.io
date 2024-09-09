@@ -13,7 +13,7 @@
         .slideshow-container {
             position: relative;
             display: block; 
-            width: 80%;
+            width: 100%;
             height:auto;
             padding-top: 3%; /* This creates a square aspect ratio */
         }
@@ -21,8 +21,8 @@
         .mySlides {
             display: inline-block;
             position: absolute;
-            width: 100%;
-            height: 95%;
+            max-width: 100%;
+            max-height: 95%;
         }
 
         .mySlides img {
@@ -34,7 +34,7 @@
 			
         .prev, .next {
             position: absolute;
-    	    top: 20%;
+    	    top: 60%;
    	transform: translateY(-60%);
     font-size: 26px;
     color: black;
@@ -42,7 +42,7 @@
     padding: 10px;
     border-radius: 60%;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
         }
 
         .prev {
@@ -102,6 +102,7 @@
 							<li><a href="#intro">Home</a></li>
 							<li><a href="#one">Research</a></li>
 							<li><a href="#two">Bio</a></li>
+							<li><a href="#travel">Life!=Work</a></li>
 							<li><a href="#three">Contact</a></li>
 						</ul>
 					</nav>
@@ -154,7 +155,7 @@
 							
 						<section>
 						<!-- Slideshow 2 -->
-						<div id="slideshow1" class="slideshow-container">
+						<div id="slideshow1" class="slideshow-container" style="width:50%;">
             <!-- Slides -->
             <div class="mySlides">
                 <img src="images/astero.png" alt="Neutron Star EOS Modelling 1" data-position="top center" style="width:100%; height:auto">
@@ -185,7 +186,7 @@
 						<div style="height: 4px;"></div>
           <section>
 						<!-- Slideshow 1 -->
-						<div id="slideshow2" class="slideshow-container">
+						<div id="slideshow2" class="slideshow-container" style="width:50%;">
             <!-- Slides -->
             <div class="mySlides">
                 <img src="images/nseosmr.png" alt="Neutron Star EOS Modelling 1" style="width:100%; height:auto">
@@ -279,41 +280,57 @@
 									<li><p>Ashok Kumar Mishra Memorial Gold medal 2019, Utkal University.</p></li>
 									
 								</section>
-								
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Love Traveling, Hiking and Exploring new places</h3>
-									<p> Few clicks from  my phone-cam</p>
+								</div>
+								</div>
 								</section>
-								<section>
-									          
-						<!-- Slideshow 1 -->
-						<div id="slideshow3" class="slideshow-container" style="float:left;">
+								
+								
+								
+								<div style="height: 10px;"></div>
+
+						<!-- travel -->
+
+								<section id="travel" class="wrapper style2 spotlights">
+						<h3>Further Interests</h3>	
+					<ul style="list-style-type: none; padding-left: 30px;">
+    					<li style="display: inline; margin-right: 20px;">Hiking</li>
+   					     <li style="display: inline; margin-right: 20px;">Cycling</li>
+					</ul>
+							
+						<section>
+						<div class="content">
+								<div class="inner">
+									<h2 style="color:black;">Love travelling, and exploring new places</h2>
+									<h3 style="color:black;">Find few clicks from my phone-cam</h3>
+															
+									<ul class="actions">
+										<li><a href="generic.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						<!-- Slideshow 2 -->
+						<div id="slideshow3" class="slideshow-container" style="width:50%;">
             <!-- Slides -->
             <div class="mySlides">
-                <img src="images/nseosmr.png" alt="Neutron Star EOS Modelling 1" style="width:100%; height:70%">
+                <img src="images/astero.png" alt="Neutron Star EOS Modelling 1" data-position="top center" style="width:100%; height:auto">
             </div>
             <div class="mySlides">
-                <img src="images/hyp_frac.png" alt="Neutron Star EOS Modelling 2" style="width:100%; height:70%">
+                <img src="images/ltilde.png" alt="Neutron Star EOS Modelling 2" data-position="top center" style="width:100%; height:auto">
             </div>
             <div class="mySlides">
-                <img src="images/eosmr_v2.png" alt="Neutron Star EOS Modelling 3" style="width:100%; height:70%">
+                <img src="images/tidal.png" alt="Neutron Star EOS Modelling 3" data-position="top center" style="width:100%; height:auto">
             </div>
 
             <!-- Navigation arrows -->
             <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
         </div>
+							
+						</section
 
-								</section>
-								
-								
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+
+
+
 
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
