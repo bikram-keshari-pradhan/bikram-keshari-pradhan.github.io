@@ -13,7 +13,7 @@
         .slideshow-container {
             position: relative;
             display: block; 
-            width: 100%;
+            width: 80%;
             height:auto;
             padding-top: 3%; /* This creates a square aspect ratio */
         }
@@ -34,13 +34,13 @@
 			
         .prev, .next {
             position: absolute;
-    	    top: 50%;
-   	transform: translateY(-50%);
-    font-size: 36px;
+    	    top: 20%;
+   	transform: translateY(-60%);
+    font-size: 26px;
     color: black;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 60%;
     cursor: pointer;
     z-index: 1;
         }
@@ -167,8 +167,8 @@
             </div>
 
             <!-- Navigation arrows -->
-            <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
         </div>
 							<div class="content">
 								<div class="inner">
@@ -198,8 +198,8 @@
             </div>
 
             <!-- Navigation arrows -->
-            <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
         </div>
 
         <div class="content">
@@ -250,6 +250,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         showSlides('slideshow1');
         showSlides('slideshow2');
+	showSlides('slideshow3');   
     });
     </script>
 			
@@ -281,8 +282,28 @@
 								
 								<section>
 									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3>Love Traveling, Hiking and Exploring new places</h3>
+									<p> Few clicks from  my phone-cam</p>
+									<div style="height: 4px;"></div>
+          
+						<!-- Slideshow 1 -->
+						<div id="slideshow3" class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides">
+                <img src="images/nseosmr.png" alt="Neutron Star EOS Modelling 1" style="width:100%; height:70%">
+            </div>
+            <div class="mySlides">
+                <img src="images/hyp_frac.png" alt="Neutron Star EOS Modelling 2" style="width:100%; height:70%">
+            </div>
+            <div class="mySlides">
+                <img src="images/eosmr_v2.png" alt="Neutron Star EOS Modelling 3" style="width:100%; height:70%">
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
+        </div>
+
 								</section>
 								<section>
 									<span class="icon solid major fa-link"></span>
