@@ -28,15 +28,15 @@
         .mySlides img {
             width: 100%;
             max-height: 95%;
-            display: inline-block;
-            object-fit: cover; /* Ensure the image covers the container without distortion */
+            display: block;
+            object-fit: fill; /* Ensure the image covers the container without distortion */
         }
 			
         .prev, .next {
-            position: absolute;
-    	    top: 60%;
-   	transform: translateY(-60%);
-    font-size: 26px;
+            position: relative;
+    	    top: 50%;
+   	transform: translateY(-50%);
+    font-size: 16px;
     color: black;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
@@ -46,11 +46,11 @@
         }
 
         .prev {
-            left: 0;
+            left: 1px;
         }
 
         .next {
-            right: 0;
+            right: 1px;
         }
         
 
