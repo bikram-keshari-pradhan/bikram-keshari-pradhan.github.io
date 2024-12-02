@@ -3472,7 +3472,7 @@ input, select, textarea {
 
 			#sidebar + #wrapper {
 				margin-left: 0;
-				padding-top: 5.5em;
+				padding-top: 10.5em;
 			}
 
 		}
@@ -3800,7 +3800,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1050px) {
 
 			#sidebar {
 				height: 10.5em;
