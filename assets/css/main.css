@@ -3468,11 +3468,11 @@ input, select, textarea {
 		margin-left: 17em;
 	}
 
-		@media screen and (max-width: 986px) {
+		@media screen and (max-width: 1280px) {
 
 			#sidebar + #wrapper {
 				margin-left: 0;
-				padding-top: 9.5em;
+				padding-top: 10.5em;
 			}
 
 		}
