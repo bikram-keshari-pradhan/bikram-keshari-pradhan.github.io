@@ -3465,19 +3465,19 @@ input, select, textarea {
 /* Wrapper (main) */
 
 	#sidebar + #wrapper {
-		margin-left: 17em;
+		margin-left: 18em;
 	}
 
 		@media screen and (max-width: 1280px) {
 
 			#sidebar + #wrapper {
 				margin-left: 0;
-				padding-top: 10.5em;
+				padding-top: 3.5em;
 			}
 
 		}
 
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 736px) {
 
 			#sidebar + #wrapper {
 				padding-top: 0;
@@ -3803,9 +3803,9 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#sidebar {
-				height: 9.5em;
+				height: 3.5em;
 				left: 0;
-				line-height: 9.5em;
+				line-height: 3.5em;
 				overflow: hidden;
 				padding: 0;
 				text-align: center;
