@@ -3803,9 +3803,9 @@ input, select, textarea {
 		@media screen and (max-width: 936px) {
 
 			#sidebar {
-				height: 3.5em;
+				height: 9.5em;
 				left: 0;
-				line-height: 3.5em;
+				line-height: 9.5em;
 				overflow: hidden;
 				padding: 0;
 				text-align: center;
